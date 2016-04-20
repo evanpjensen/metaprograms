@@ -87,12 +87,12 @@ struct cell {
 		local_population=
 		(x + 1 != size + 2 ? (y + 1 != size + 2 ? cell<round - 1, x + 1, y + 1>::val : 0) : 0) +
 		(x + 1 != size + 2 ? (y - 1 != 0 ?        cell<round - 1, x + 1, y - 1>::val : 0) : 0) +
-		(x - 1 != 0 ? (y + 1 != size + 2 ?		  cell<round - 1, x - 1, y + 1>::val : 0) : 0) +
-		(x - 1 != 0 ? (y - 1 != 0 ?				  cell<round - 1, x - 1, y - 1>::val : 0) : 0) +
-		(x + 1 != size + 2 ? (y != 0 ?			  cell<round - 1, x + 1, y    >::val : 0) : 0) +
-		(x - 1 != 0 ? (y != 0 ?					  cell<round - 1, x - 1, y    >::val : 0) : 0) +
-		(x != 0 ? (y + 1 != size + 2 ?			  cell<round - 1, x    , y + 1>::val : 0) : 0) +
-		(x != 0 ? (y - 1 != 0 ?					  cell<round - 1, x    , y - 1>::val : 0) : 0) 
+		(x - 1 != 0 ? (y + 1 != size + 2 ?	  cell<round - 1, x - 1, y + 1>::val : 0) : 0) +
+		(x - 1 != 0 ? (y - 1 != 0 ?		  cell<round - 1, x - 1, y - 1>::val : 0) : 0) +
+		(x + 1 != size + 2 ? (y != 0 ?		  cell<round - 1, x + 1, y    >::val : 0) : 0) +
+		(x - 1 != 0 ? (y != 0 ?			  cell<round - 1, x - 1, y    >::val : 0) : 0) +
+		(x != 0 ? (y + 1 != size + 2 ?		  cell<round - 1, x    , y + 1>::val : 0) : 0) +
+		(x != 0 ? (y - 1 != 0 ?			  cell<round - 1, x    , y - 1>::val : 0) : 0) 
 	};
 	enum {
 		val = (cell<round, x, y>::local_population == 2 ? cell<round - 1, x, y>::val :
