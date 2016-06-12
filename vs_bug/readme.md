@@ -40,9 +40,9 @@ int main() {
 As you can see, the compiler should be able to find the value of sum and in doing so optimize away the functions `fold` and `add` as well as the local variable `sum_these` in main. If you run the program the value `45` is printed. If you disassemble the program to verify it contains only the main function you will be horrified.
 ## IDA screen shots
 
-!(main function)[main.png]
+![main function](main.png)
 
-!(fold function)[fold.png]
+![fold function](fold.png)
 
 ## Errors
 
