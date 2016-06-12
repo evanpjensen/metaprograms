@@ -52,11 +52,11 @@ Here is a breakdown of everything wrong with this program.
 
 * In preparation for the call to fold, the `fn` argument is pushed. It is never initialized
 
-* In the body of fold, it appears that the `add` function has been propagated six times and inlined once at the end for a total of 7 calls. That's two too few
+* In the body of `fold`, it appears that the `add` function has been propagated six times and inlined once at the end for a total of 7 calls. That's two too few
 
 * Fold generates the value `43` when executed. It should be `45`. It doesn't operate on the first two elements of `sum_these`
 
-* The return value of Fold isn't saved
+* The return value of `fold` isn't saved
 
 * Visual studio LOLJKs and inserts the compile time computed `45` before the call to `cout<<`
 
